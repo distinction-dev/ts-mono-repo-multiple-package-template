@@ -1,0 +1,53 @@
+{
+  "name": "util-package",
+  "version": "1.0.1",
+  "description": "Repository for the util packages",
+  "scripts": {
+    "verify": "lerna run verify --stream",
+    "prettier": "lerna run prettier",
+    "prepublish": "npm run build",
+    "build": "lerna run build",
+    "test": "NODE_ENV=development lerna run test --stream",
+    "bootstrap": "npx lerna bootstrap"
+  },
+  "author": "Jap Purohit",
+  "license": "ISC",
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier",
+      "pre-push": "npm run verify"
+    }
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-flowtype": "^5.7.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^6.0.0",
+    "lerna": "^7.4.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.0",
+    "prettier-config-standard": "^4.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "wait-on": "^5.3.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {}
+}
