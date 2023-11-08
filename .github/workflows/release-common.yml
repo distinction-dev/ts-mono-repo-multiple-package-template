@@ -1,4 +1,4 @@
-name: Publish NPM Packages Script As Indpendent Version
+name: Publish NPM Packages Script As Common Version
 
 on:
   push:
